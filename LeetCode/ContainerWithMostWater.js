@@ -1,4 +1,4 @@
-const height = [4,3,2,1,4]
+const height = [0,2]
 let maxArea = 1
 for (let i = 0; i < height.length-1; i++) {
     for (let j = i+1; j < height.length; j++) {
@@ -16,3 +16,4 @@ for (let i = 0; i < height.length-1; i++) {
         }
     }
 }
+console.log(maxArea)
