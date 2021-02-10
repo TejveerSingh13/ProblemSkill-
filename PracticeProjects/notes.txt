@@ -1,0 +1,6 @@
+1. Access Classes and id in CSS
+    .'name' for class
+    #'name' for id's
+2. To Select all elements in CSS    
+    * {} and can update property globally 
+3. 
