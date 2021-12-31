@@ -1,0 +1,59 @@
+ul{
+    list-style-type: none;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+h2{
+    margin: 16px auto 8px;
+}
+button{
+    margin: 16px auto;
+    border: 2px solid darkmagenta;
+    border-radius: 12px;
+    padding: 8px;
+    text-align: center;
+    width: 30%;
+}
+.nav-class{
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    background-color: darkmagenta;
+    color: white;
+}
+.nav-title{
+    align-self: center;
+    font-size: x-large;
+}
+.option-container{
+    display: flex;
+    margin: auto 8px auto auto;
+}
+.options{
+    margin: auto 8px;
+    font-size: larger;
+}
+.main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    margin: 16px;
+    border-radius: 12px;
+    background-color: white;
+}
+.color{
+    text-align: center;
+    font-size: x-large;
+}
+.change-button{
+    margin: 16px auto;
+    width: 30%;
+}

@@ -1,0 +1,68 @@
+body{
+    margin: 0px;
+    padding: 0px
+}
+ul{
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none ;
+  display: flex;
+}
+span{
+  font-weight: 300;
+  padding: 0 8px;
+}
+.main-nav{
+    padding: 16px 8px;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid cornflowerblue;
+}
+.title{
+    font-size: x-large;
+    margin: 0 12px;
+}
+.tray-icon{
+    display: inline-block;
+    margin: 0 16px 0 auto;
+    font-size: 1.5em;
+    transform: rotate(0deg);
+    transition: transform 0.5s
+}
+.tray-icon-active{
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
+    color: rgb(3, 169, 211);
+}
+.icon-div{
+    margin: 0 32px 0 auto;
+    display: none;
+}
+.icons {
+    margin: auto 8px;
+    font-size: 1.25em;
+}
+.tray-icon:hover{
+    cursor: pointer;
+}
+.icons:hover{
+    cursor: pointer;
+}
+.nav-items{
+  margin: 0 32px 0 auto;
+  display: none;
+}
+.dropdown-menu{
+  background-color: gray;
+}
+@media screen and (min-width: 768px) {
+    .tray-icon{
+        display: none; 
+    }
+    .icon-div{
+        display: inline-block;
+    }
+    .nav-items{
+      display: inline-block;
+    }
+}
