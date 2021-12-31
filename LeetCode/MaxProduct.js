@@ -1,5 +1,6 @@
 const word = ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"];
 
+// here w1 length is < w2 length
 const stringCompare = (w1, w2) => {
   for (let i = 0; i < w1.length; i++) {
     if (w2.includes(w1[i])) return false;
