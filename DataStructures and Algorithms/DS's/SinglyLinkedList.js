@@ -122,25 +122,58 @@ class SinglyLinkedList {
         return false; // Return false if the index is invalid or the node doesn't exist
     }
     
+    insert(index, val) {
+        if (index < 0 || index > this.length) return false; // If the index is out of bounds, return false
+        if (index === 0) return !!this.unshift(val); // If the index is 0, use the unshift() method to insert the value at the beginning of the list
+        if (index === this.length) return !!this.push(val); // If the index is the same as the length of the list, use the push() method to insert the value at the end of the list
+    
+        let newNode = new Node(val); // Create a new node with the given value
+        let previous = this.get(index - 1); // Get the node at the previous index
+        let newNext = previous.next; // Save the reference to the next node of the previous node
+        previous.next = newNode; // Set the next reference of the previous node to the new node
+        newNode.next = newNext; // Set the next reference of the new node to the saved next node
+        this.length += 1; // Increment the length of the list by 1
+        return true; // Return true to indicate that the value was successfully inserted
+    }
+    
+    remove(index) {
+        if (index < 0 || index >= this.length) return undefined; // If the index is out of bounds, return undefined
+        if (index === 0) return this.shift(); // If the index is 0, use the shift() method to remove and return the first node
+        if (index === this.length - 1) return this.pop(); // If the index is the same as the length of the list minus 1, use the pop() method to remove and return the last node
+    
+        let previous = this.get(index - 1); // Get the node at the previous index
+        let current = previous.next; // Get the node at the specified index
+        previous.next = current.next; // Update the next reference of the previous node to skip the current node
+        this.length -= 1; // Decrement the length of the list by 1
+        return current; // Return the removed node
+    }
+
+    reverse() {
+        let node = this.head; // Start with the current head node
+        this.head = this.tail; // Swap the head and tail references
+        this.tail = node;
+    
+        let prev = null;
+        let next;
+    
+        for (let i = 0; i < this.length; i++) {
+            next = node.next; // Save the reference to the next node
+            node.next = prev; // Reverse the next reference of the current node to point to the previous node
+            prev = node; // Move the prev pointer to the current node
+            node = next; // Move the node pointer to the next node
+        }
+        return this; // Return the reversed linked list
+    }
+    
+    // Helper function to look at current state of the Linked list
+    print(){
+        let arr = []
+        let current  = this.head
+        while (current) {
+            arr.push(current.val)
+            current = current.next
+        }
+        console.log(arr);
+    } 
     
 }
-
-// Testing
-
-let first = new SinglyLinkedList()
-first.push(11)
-first.push(22)
-first.push(33)
-first.push(44)
-first.traverse()
-// first.next = new Node("there")
-console.log("full list",first)
-first.pop()
-console.log("pop list",first);
-first.shift()
-console.log("shift list",first);
-first.unshift(0)
-console.log("unshift list",first);
-console.log("get node - ",first.get(1));
-console.log("set node - ",first.set(1, 'xx'), first.get(1));
-
