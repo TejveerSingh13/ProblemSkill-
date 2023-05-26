@@ -36,10 +36,10 @@ Represents a singly linked list.
 ###### print(): Prints the current state of the linked list as an array.
 These classes and methods provide essential functionality to work with a singly linked list data structure. They allow you to manipulate and traverse the linked list, insert and remove nodes at specific positions, and reverse the order of nodes. The print() method is a helpful utility for debugging and visualizing the state of the linked list.
 ##### Big O complexity
-Insertion = O(1)
-Removal = O(1) or O(n)
-Searching, Access = O(n)
-SLL better at insertion and deletion as compared to arrays
+* Insertion = O(1)
+* Removal = O(1) or O(n)
+* Searching, Access = O(n)
+###### SLL better at insertion and deletion as compared to arrays
 
 ## Class JS ES2015 basics notes:
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/b42c439c-7d94-45d3-81e8-b1f82cea590d)
