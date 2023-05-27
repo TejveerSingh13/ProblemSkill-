@@ -4,7 +4,7 @@ A repository for JS practice
 Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
 
 ## Data Structures in Repo
-Check in DataStructures and Algorithms --> DS's
+Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
 #### Node class:
 
