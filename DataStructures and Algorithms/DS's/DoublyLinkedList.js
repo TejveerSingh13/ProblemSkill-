@@ -149,20 +149,21 @@ class DoublyLinkedList {
         return current; // Return the removed node
     }
 
-    reverse(){
-        let node = this.head
-        this.head = this.tail
-        this.tail = node
+    // Reverse the order of nodes in the linked list
+    reverse() {
+        let node = this.head; // Store the current head node
+        this.head = this.tail; // Set the head to be the current tail node
+        this.tail = node; // Set the tail to be the stored head node
 
-        let prev = null
-        let next
+        let prev = null; // Initialize a variable to track the previous node
+        let next; // Initialize a variable to store the next node temporarily
         for (let i = 0; i < this.length; i++) {
-            next = node.next
-            node.next = prev
-            node.prev = next
-            prev = node
-            node = next
-        }    
+            next = node.next; // Store the next node
+            node.next = prev; // Update the next reference of the current node to the previous node
+            node.prev = next; // Update the previous reference of the current node to the next node
+            prev = node; // Update the previous node to be the current node
+            node = next; // Move to the next node
+        }
     }
 
     // Helper function to look at current state of the Linked list
