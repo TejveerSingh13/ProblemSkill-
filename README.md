@@ -3,7 +3,7 @@ A repository for JS practice
 
 Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
 
-## Data Structures in Repo
+## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
 #### Node class:
@@ -41,7 +41,7 @@ These classes and methods provide essential functionality to work with a singly 
 * Searching, Access = O(n)
 ###### SLL better at insertion and deletion as compared to arrays
 
-### 2. Doublyly Linked List
+### 2. Doubly Linked List
 #### Node class:
 
 Represents a node in the doublyly linked list. Constructor: Initializes the node with a value and sets the next and previous references to null.
@@ -50,9 +50,9 @@ Represents a node in the doublyly linked list. Constructor: Initializes the node
 * val: The value stored in the node.
 * next: Reference to the next node (initially set to null).
 * prev: Reference to the previous node (initially set to null).
-#### DoublylyLinkedList class:
+#### DoublyLinkedList class:
 
-Represents a doublyly linked list.
+Represents a doubly linked list.
 
 ##### Properties:
 * length: The number of nodes in the linked list.
