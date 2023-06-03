@@ -2,6 +2,9 @@
 A repository for JS practice
 
 Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
+## Important Algorithms learned from leetcode
+### 1. Floyd's cycle-finding algorithm
+Floyd's cycle-finding algorithm, also known as the "tortoise and hare" algorithm, is a popular algorithm used to detect cycles in a linked list. The algorithm involves two pointers, often referred to as the "tortoise" and the "hare," which traverse the linked list at different speeds. The tortoise moves one step at a time, while the hare moves two steps at a time. By comparing the positions of the tortoise and the hare at each step, the algorithm can determine if there is a cycle in the linked list. The key idea behind the algorithm is that if there is a cycle in the linked list, the hare will eventually catch up to the tortoise at some point during its traversal. The algorithm has a time complexity of O(n), where n is the number of nodes in the linked list.
 
 ## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
