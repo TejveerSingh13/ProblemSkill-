@@ -177,3 +177,5 @@ class DoublyLinkedList {
         console.log(arr);
     } 
 }
+
+module.exports = DoublyLinkedList
