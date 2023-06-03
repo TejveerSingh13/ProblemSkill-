@@ -79,6 +79,36 @@ These methods allow for various operations on the doubly linked list, such as ad
 * Searching, Access = O(n)
 ###### DLL takes more memory but is more flexible. Removal is always O(1). Better than finding node then SLL
 
+### 3. Stack and Queue
+
+Stack uses LIFO and Queue uses FIFO.
+
+#### 3A. Stack class:
+
+The Stack class relies on the SinglyLinkedList class to store and manipulate the stack elements. The SinglyLinkedList class provides the necessary methods for managing the linked list, which are used by the Stack class to implement stack-specific operations.
+* Constructor: Initializes an empty stack by creating a new SinglyLinkedList instance.
+
+##### Methods:
+
+###### push(val): Adds a new value to the top of the stack.
+###### pop(): Removes and returns the value from the top of the stack.
+
+#### 3B. Queue class:
+
+The Queue class utilizes the SinglyLinkedList class to store and manipulate the queue elements. The SinglyLinkedList class provides the necessary methods for managing the linked list, which are used by the Queue class to implement queue-specific operations. 
+* Constructor:  Initializes an empty queue by creating a new SinglyLinkedList instance.
+
+##### Methods:
+
+###### enqueue(val): Adds a new value to the back of the queue.
+###### dequeue(): Removes and returns the value from the front of the queue.
+
+#### Big O complexity
+* Insertion = O(1)
+* Removal = O(1)
+* Searching, Access = O(n)
+###### Using Arrays for both of them is inefficient since it will re-index all element on push/pop/unshift/shift operation/s.
+
 ## Class JS ES2015 basics notes:
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/b42c439c-7d94-45d3-81e8-b1f82cea590d)
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/49ebe313-8e6d-4515-91ab-df99da4beb45)
