@@ -109,6 +109,48 @@ The Queue class utilizes the SinglyLinkedList class to store and manipulate the 
 * Searching, Access = O(n)
 ###### Using Arrays for both of them is inefficient since it will re-index all element on push/pop/unshift/shift operation/s.
 
+### 4. Trees
+
+Tree are non-linear. SLL is a special case of tree. 
+
+Treminology : Root- top node; Child- node connected to another node when moving away from root; Parent- Converse node of a child; Sibling: group of nodes with same parents; Leaf: node with no children; Edge: Connection between one node and another, Degree: the total number of children of a node is called the degree of the node.
+
+Use Cases: DOM, Network Routing, OS-folder: directory.
+
+#### Tree Traversal
+
+Traverse functions only for Binary Trees.
+
+##### 1. Breadth First Search (BFS) :
+
+Working horizontally. The BFS() function performs a breadth-first search traversal on a binary search tree (BST), visiting each node level by level. It uses a queue to process nodes, starting from the root and iteratively adding the left and right child nodes to the queue. The algorithm returns an array of node values in BFS order.
+
+ToDo : Use queue developed in previous section instead of array.
+
+##### 2. Depth First Search (DFS)
+
+Working vertically. Have three different approch.
+
+###### 2.1. InOrder
+
+First vist left child then node and then right child.
+
+The InOrder function performs an in-order traversal of a binary search tree (BST). It starts from the root node and recursively traverses the left subtree, then appends the value of the current node, and finally traverses the right subtree. The function returns an array containing the node values in in-order traversal order.
+
+###### 2.2. PreOrder
+
+First visit the node then its complete left side and then the right side.
+
+The PreOrder() function traverses a binary search tree (BST) in pre-order fashion, starting from the root node. It recursively visits each node, appending its value to an array, and then traverses the left and right subtrees. The function returns an array of the node values in pre-order traversal order.
+
+###### 2.3. PostOrder
+
+Visit the node after we explore its left and right.
+
+The PostOrder function performs a post-order traversal of a binary search tree (BST). It starts from the root node and recursively traverses the left and right subtrees. The function appends the value of each node to an array after traversing its children. Finally, it returns an array containing the node values in post-order traversal order.
+
+##### ToDo : Balanced and Balancing trees, Delete node in BST
+
 ## Class JS ES2015 basics notes:
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/b42c439c-7d94-45d3-81e8-b1f82cea590d)
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/49ebe313-8e6d-4515-91ab-df99da4beb45)
