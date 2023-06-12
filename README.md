@@ -143,6 +143,8 @@ First visit the node then its complete left side and then the right side.
 
 The PreOrder() function traverses a binary search tree (BST) in pre-order fashion, starting from the root node. It recursively visits each node, appending its value to an array, and then traverses the left and right subtrees. The function returns an array of the node values in pre-order traversal order.
 
+Basically used when you want to store tree in an array somewhere
+
 ###### 2.3. PostOrder
 
 Visit the node after we explore its left and right.
