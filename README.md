@@ -6,6 +6,9 @@ Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
 ### 1. Floyd's cycle-finding algorithm
 Floyd's cycle-finding algorithm, also known as the "tortoise and hare" algorithm, is a popular algorithm used to detect cycles in a linked list. The algorithm involves two pointers, often referred to as the "tortoise" and the "hare," which traverse the linked list at different speeds. The tortoise moves one step at a time, while the hare moves two steps at a time. By comparing the positions of the tortoise and the hare at each step, the algorithm can determine if there is a cycle in the linked list. The key idea behind the algorithm is that if there is a cycle in the linked list, the hare will eventually catch up to the tortoise at some point during its traversal. The algorithm has a time complexity of O(n), where n is the number of nodes in the linked list.
 
+### 2. Boyer-Moore Voting Algorithm
+The Boyer-Moore Voting Algorithm is an efficient algorithm used to find the majority element in an array. The majority element is defined as an element that appears more than n/2 times in an array of length n. The algorithm operates by maintaining a count and a candidate element. It iterates through the array, updating the count and candidate based on certain conditions. If the count becomes zero, the algorithm selects a new candidate. At the end of the iteration, the selected candidate is checked to determine if it meets the majority element criteria. The algorithm guarantees that if there is a majority element present, it will correctly identify it. The Boyer-Moore Voting Algorithm has a time complexity of O(n) and a space complexity of O(1), making it highly efficient. However, it does not provide information about the maximum count or multiple majority elements in the array.
+
 ## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
