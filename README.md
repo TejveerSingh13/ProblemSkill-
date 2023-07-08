@@ -156,6 +156,25 @@ The PostOrder function performs a post-order traversal of a binary search tree (
 
 ##### ToDo : Balanced and Balancing trees, Delete node in BST
 
-## Class JS ES2015 basics notes:
+## Javascript Notes:
+
+### Methods and Concepts
+
+#### 1. Set():
+<p>The Set object in JavaScript is a collection of unique values, where each value occurs only once within the set.
+<br>It provides methods to add, <strong>add(val)</strong>; remove, <strong>delete(val)</strong> ; and check for the existence, <strong>has(val)</strong> of elements in the set.
+<br>The Set is an iterable object, allowing you to iterate over its elements using various techniques like forEach or for...of loops.
+<br>It is commonly used when you need to store a collection of unique values or perform operations like deduplicating an array or checking for the presence of specific values.
+<br>The Set object is designed to be simple and efficient for tasks involving unique values.</p>
+
+#### 2. Map():
+
+<p>The Map object in JavaScript is a collection of key-value pairs, where each key is unique and can be used to access the corresponding value.
+<br>It provides methods to add, remove, and retrieve elements based on their keys.
+<br>The Map is an iterable object, allowing you to iterate over its entries using techniques like forEach or for...of loops.
+<br>It is commonly used when you need to store and retrieve values based on a specific key or perform operations like mapping keys to corresponding values.
+<br>The Map object provides a more flexible and powerful alternative to using plain objects as key-value stores.</p>
+
+### Class JS ES2015 basics:
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/b42c439c-7d94-45d3-81e8-b1f82cea590d)
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/49ebe313-8e6d-4515-91ab-df99da4beb45)
