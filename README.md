@@ -9,6 +9,11 @@ Floyd's cycle-finding algorithm, also known as the "tortoise and hare" algorithm
 ### 2. Boyer-Moore Voting Algorithm
 The Boyer-Moore Voting Algorithm is an efficient algorithm used to find the majority element in an array. The majority element is defined as an element that appears more than n/2 times in an array of length n. The algorithm operates by maintaining a count and a candidate element. It iterates through the array, updating the count and candidate based on certain conditions. If the count becomes zero, the algorithm selects a new candidate. At the end of the iteration, the selected candidate is checked to determine if it meets the majority element criteria. The algorithm guarantees that if there is a majority element present, it will correctly identify it. The Boyer-Moore Voting Algorithm has a time complexity of O(n) and a space complexity of O(1), making it highly efficient. However, it does not provide information about the maximum count or multiple majority elements in the array.
 
+### 3. Dutch National Flag Algorithm
+The Dutch National Flag algorithm, also known as the 3-way partitioning algorithm, is a sorting algorithm that allows us to sort an array with three distinct values in linear time and with constant extra space.
+The algorithm is particularly useful when dealing with problems that involve dividing elements into three categories or groups. One common application is sorting arrays with three different colors or categories.
+The idea behind the algorithm is to maintain three pointers: left, curr, and right. The left pointer represents the boundary of the sorted first category, the right pointer represents the boundary of the sorted third category, and the curr pointer iterates through the array.
+
 ## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
