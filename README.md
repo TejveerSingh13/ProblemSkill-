@@ -6,6 +6,14 @@ Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
 ### 1. Floyd's cycle-finding algorithm
 Floyd's cycle-finding algorithm, also known as the "tortoise and hare" algorithm, is a popular algorithm used to detect cycles in a linked list. The algorithm involves two pointers, often referred to as the "tortoise" and the "hare," which traverse the linked list at different speeds. The tortoise moves one step at a time, while the hare moves two steps at a time. By comparing the positions of the tortoise and the hare at each step, the algorithm can determine if there is a cycle in the linked list. The key idea behind the algorithm is that if there is a cycle in the linked list, the hare will eventually catch up to the tortoise at some point during its traversal. The algorithm has a time complexity of O(n), where n is the number of nodes in the linked list.
 
+### 2. Boyer-Moore Voting Algorithm
+The Boyer-Moore Voting Algorithm is an efficient algorithm used to find the majority element in an array. The majority element is defined as an element that appears more than n/2 times in an array of length n. The algorithm operates by maintaining a count and a candidate element. It iterates through the array, updating the count and candidate based on certain conditions. If the count becomes zero, the algorithm selects a new candidate. At the end of the iteration, the selected candidate is checked to determine if it meets the majority element criteria. The algorithm guarantees that if there is a majority element present, it will correctly identify it. The Boyer-Moore Voting Algorithm has a time complexity of O(n) and a space complexity of O(1), making it highly efficient. However, it does not provide information about the maximum count or multiple majority elements in the array.
+
+### 3. Dutch National Flag Algorithm
+The Dutch National Flag algorithm, also known as the 3-way partitioning algorithm, is a sorting algorithm that allows us to sort an array with three distinct values in linear time and with constant extra space.
+The algorithm is particularly useful when dealing with problems that involve dividing elements into three categories or groups. One common application is sorting arrays with three different colors or categories.
+The idea behind the algorithm is to maintain three pointers: left, curr, and right. The left pointer represents the boundary of the sorted first category, the right pointer represents the boundary of the sorted third category, and the curr pointer iterates through the array.
+
 ## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
@@ -143,6 +151,8 @@ First visit the node then its complete left side and then the right side.
 
 The PreOrder() function traverses a binary search tree (BST) in pre-order fashion, starting from the root node. It recursively visits each node, appending its value to an array, and then traverses the left and right subtrees. The function returns an array of the node values in pre-order traversal order.
 
+Basically used when you want to store tree in an array somewhere
+
 ###### 2.3. PostOrder
 
 Visit the node after we explore its left and right.
@@ -151,6 +161,25 @@ The PostOrder function performs a post-order traversal of a binary search tree (
 
 ##### ToDo : Balanced and Balancing trees, Delete node in BST
 
-## Class JS ES2015 basics notes:
+## Javascript Notes:
+
+### Methods and Concepts
+
+#### 1. Set():
+<p>The Set object in JavaScript is a collection of unique values, where each value occurs only once within the set.
+<br>It provides methods to add, <strong>add(val)</strong>; remove, <strong>delete(val)</strong> ; and check for the existence, <strong>has(val)</strong> of elements in the set.
+<br>The Set is an iterable object, allowing you to iterate over its elements using various techniques like forEach or for...of loops.
+<br>It is commonly used when you need to store a collection of unique values or perform operations like deduplicating an array or checking for the presence of specific values.
+<br>The Set object is designed to be simple and efficient for tasks involving unique values.</p>
+
+#### 2. Map():
+
+<p>The Map object in JavaScript is a collection of key-value pairs, where each key is unique and can be used to access the corresponding value.
+<br>It provides methods to add, remove, and retrieve elements based on their keys.
+<br>The Map is an iterable object, allowing you to iterate over its entries using techniques like forEach or for...of loops.
+<br>It is commonly used when you need to store and retrieve values based on a specific key or perform operations like mapping keys to corresponding values.
+<br>The Map object provides a more flexible and powerful alternative to using plain objects as key-value stores.</p>
+
+### Class JS ES2015 basics:
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/b42c439c-7d94-45d3-81e8-b1f82cea590d)
 ![](https://github.com/TejveerSingh13/ProblemSkill-/assets/44855917/49ebe313-8e6d-4515-91ab-df99da4beb45)
