@@ -223,7 +223,22 @@ class BST {
           }
         }
         return true; // Node successfully deleted
-      }      
+    }
+
+    findLongestPath(node) {
+
+      if (node === null) {
+        return -1; // Base case: empty tree has path length 0
+      }
+    
+      // Recursively find the longest path for the left and right subtrees
+      const leftPath = tree.findLongestPath(node.left);
+      const rightPath = tree.findLongestPath(node.right);
+    
+      // Return the maximum path length from the current node to a leaf node
+      return 1+ Math.max(leftPath, rightPath);
+    }
+      
 }
 
 // Example To Test 
@@ -252,4 +267,12 @@ console.log('Pre -',tree.PreOrder());
 console.log('Post -',tree.PostOrder());
 console.log('In -',tree.InOrder());
 console.log('------------');
-console.log('Delete -',tree.DeleteNode(13));
+let node = tree.search(10); // Find the node with the given value in the tree
+    
+if (!node) {
+    console.log("No node with the passed value exists !");
+}
+console.log('the node exist and is :', node)
+console.log('Height of node', tree.findLongestPath(node))
+console.log('Max left', tree.findLongestPath(node.left))
+console.log('Max right', tree.findLongestPath(node.right))
