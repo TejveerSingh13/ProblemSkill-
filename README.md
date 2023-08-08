@@ -127,7 +127,7 @@ Use Cases: DOM, Network Routing, OS-folder: directory.
 
 #### Tree Traversal
 
-Traverse functions only for Binary Trees.
+Traverse functions for Binary Trees/Graphs (Binary Only).
 
 ##### 1. Breadth First Search (BFS) :
 
@@ -159,7 +159,14 @@ Visit the node after we explore its left and right.
 
 The PostOrder function performs a post-order traversal of a binary search tree (BST). It starts from the root node and recursively traverses the left and right subtrees. The function appends the value of each node to an array after traversing its children. Finally, it returns an array containing the node values in post-order traversal order.
 
-##### ToDo : Balanced and Balancing trees, Delete node in BST
+#### 4.1 Binary Search Tree (BST)
+
+BST.js code contains complete code for a Binary search tree. Methods just as all tree traversal, inserting, serching and deleted all include in the code.
+The only drawback of BST in case of a skewed binary tree the time complexity for the tree can become O(n) instead of O(log(n)) where n is the number of node. To solve this problem we have self balancing tree which insure the time complexity to access a specific node remains O(n).
+
+#### 4.2 AVL Tree
+
+AVL.js code contains complete code fot an AVL tree. Methods such as insertion and deletion are added. Helper methods for rotation are also mentioned in the code. We find a balance factor(BF) for each node and for the tree to be balanced we make sure the the BF has value [-1, 0, 1], this is achived by performing rotations on the nodes whos BF is more or less then the above range. This ensure searching time complexity will be O(log(n)).
 
 ## Javascript Notes:
 
