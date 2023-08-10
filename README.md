@@ -168,6 +168,35 @@ The only drawback of BST in case of a skewed binary tree the time complexity for
 
 AVL.js code contains complete code fot an AVL tree. Methods such as insertion and deletion are added. Helper methods for rotation are also mentioned in the code. We find a balance factor(BF) for each node and for the tree to be balanced we make sure the the BF has value [-1, 0, 1], this is achived by performing rotations on the nodes whos BF is more or less then the above range. This ensure searching time complexity will be O(log(n)).
 
+ 4.3 Heap
+
+heap - similar to tree
+Binary Heap similar to BST
+MaxBH - parent nodes are larger then child Node
+MinBH - parent nodes are smaller then child Node
+storing heap in array :
+* ---Parent to Child relation---
+* -> For any "index" of an array - "n"
+* -> left child is stored at "index" - "2n + 1"
+* -> right child is stored at "index" - "2n + 2"
+* ---Child to Parent relation---
+* -> For any child node at "index" - "n"
+* -> parent is at "index" - "(n-1)/2" <-- floor
+
+##### Insertion 
+We use an array to maintain the list. New values are added to the end of the heap. The new value are bubbled up. Max heap larger values are bubbled up, similarly smaller values are bubbled up min heap.
+
+##### Deletion
+The value to be deleted is first swapped with the last element and then is popped off. Then the last element is bubbled down to a correct to maintain the min/max structure of the heap.
+
+##### Important UseCase
+PriorityQueue -> maintaining a list of element in high to low priority order and serving them one by one according to priority. using bubbling up and down and above heap methods.
+
+##### Complexity:
+Insertion - O(logn)
+Removal - O(logn)
+Search - O(n)
+
 ## Javascript Notes:
 
 ### Methods and Concepts
