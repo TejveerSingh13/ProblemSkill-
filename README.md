@@ -117,9 +117,11 @@ The Queue class utilizes the SinglyLinkedList class to store and manipulate the 
 * Searching, Access = O(n)
 ###### Using Arrays for both of them is inefficient since it will re-index all element on push/pop/unshift/shift operation/s.
 
-### 4. Trees
+### 4. Graphs
 
-Tree are non-linear. SLL is a special case of tree. 
+#### <<<<-----------Trees----------->>>>
+
+Tree are non-linear. SLL is a special case of tree. In terms of graph a tree is a structure in which there i only one path between 2 nodes.
 
 Treminology : Root- top node; Child- node connected to another node when moving away from root; Parent- Converse node of a child; Sibling: group of nodes with same parents; Leaf: node with no children; Edge: Connection between one node and another, Degree: the total number of children of a node is called the degree of the node.
 
@@ -196,6 +198,12 @@ PriorityQueue -> maintaining a list of element in high to low priority order and
 Insertion - O(logn)
 Removal - O(logn)
 Search - O(n)
+
+#### <<<<-----------Graphs----------->>>>
+
+##### Ways to store a graphs:
+1. Adjcency Matrices - storing graph as a martix with each node represented as a row + column way
+2. Adjcency List - string graphs as a list or hashmap with each node as an index or hash key (in case of a string) and as a value they have a list of all the nodes they are connected to.
 
 ## Javascript Notes:
 
