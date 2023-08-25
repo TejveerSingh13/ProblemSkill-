@@ -31,18 +31,38 @@ class Graph {
         }
         if(this.adjList[key]) delete this.adjList[key]
     }
+
+    DFS_R(key){
+        let nodes = []
+        let visitdNodes = {}
+        const dfs = (current) => {
+            visitdNodes[current] = true
+            nodes.push(current)
+            this.adjList[current].forEach(neighbour => {
+                if(!visitdNodes[neighbour]) dfs(neighbour)
+            });
+        }
+        dfs(key)
+        return nodes
+    }
 }
 
 let g = new Graph()
-g.addVertex(1)
-g.addVertex(2)
-g.addVertex(3)
-g.addVertex(4)
-g.addEdge(1,2)
-g.addEdge(1,4)
-g.addEdge(3,2)
-g.addEdge(2,1)
+g.addVertex("A")
+g.addVertex("B")
+g.addVertex("C")
+g.addVertex("D")
+g.addVertex("E")
+g.addVertex("F")
+g.addEdge("A","B")
+g.addEdge("A","C")
+g.addEdge("D","B")
+g.addEdge("C","E")
+g.addEdge("D","E")
+g.addEdge("D","F")
+g.addEdge("F","E")
 console.log(g)
+console.log(g.DFS_R("D"))
 // g.removeEdge(3,2)
-g.removeVertex(2)
-console.log(g);
+// g.removeVertex(2)
+// console.log(g);
