@@ -45,6 +45,25 @@ class Graph {
         dfs(key)
         return nodes
     }
+
+    DFS_I(key){
+        let stack = []
+        let result = []
+        let visitdNodes = {}
+        stack.push(key)
+        visitdNodes[key] = true
+        while(stack.length){
+            let current = stack.pop()
+            result.push(current)
+            for(let ele of this.adjList[current]) {
+                if(!visitdNodes[ele]){
+                    visitdNodes[ele] = true
+                    stack.push(ele)
+                }
+            }
+        }
+        return result
+    }
 }
 
 let g = new Graph()
@@ -62,7 +81,7 @@ g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("F","E")
 console.log(g)
-console.log(g.DFS_R("D"))
+console.log(g.DFS_I("D"))
 // g.removeEdge(3,2)
 // g.removeVertex(2)
 // console.log(g);
