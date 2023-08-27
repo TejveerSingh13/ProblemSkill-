@@ -64,6 +64,24 @@ class Graph {
         }
         return result
     }
+
+    BFS(key){
+        let queue = [key]
+        let result = []
+        let visitdNodes = {}
+        visitdNodes[key] = true
+        while(queue.length){
+            let current = queue.shift()
+            result.push(current)
+            for(let ele of this.adjList[current]){
+                if(!visitdNodes[ele]){
+                    queue.push(ele)
+                    visitdNodes[ele]=true
+                }
+            }
+        }
+        return result
+    }
 }
 
 let g = new Graph()
@@ -82,6 +100,7 @@ g.addEdge("D","F")
 g.addEdge("F","E")
 console.log(g)
 console.log(g.DFS_I("D"))
+console.log(g.BFS("A"))
 // g.removeEdge(3,2)
 // g.removeVertex(2)
 // console.log(g);
