@@ -14,6 +14,10 @@ The Dutch National Flag algorithm, also known as the 3-way partitioning algorith
 The algorithm is particularly useful when dealing with problems that involve dividing elements into three categories or groups. One common application is sorting arrays with three different colors or categories.
 The idea behind the algorithm is to maintain three pointers: left, curr, and right. The left pointer represents the boundary of the sorted first category, the right pointer represents the boundary of the sorted third category, and the curr pointer iterates through the array.
 
+### 4. Topological Sort
+Topological Sort is a fundamental algorithm used to order the vertices of a **directed acyclic graph (DAG)** in such a way that for every **directed** edge (u, v), vertex u comes before vertex v in the ordering. This ordering is known as a topological order.  
+The algorithm operates by repeatedly selecting nodes with no **incoming edges**, removing them from the graph, and adding them to the topological order. It continues this process until all nodes have been included in the order. Topological sorting is widely used in various applications, including task scheduling, dependency resolution, and optimizing build systems.
+
 ## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
