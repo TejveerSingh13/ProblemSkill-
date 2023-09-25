@@ -18,6 +18,12 @@ The idea behind the algorithm is to maintain three pointers: left, curr, and rig
 Topological Sort is a fundamental algorithm used to order the vertices of a **directed acyclic graph (DAG)** in such a way that for every **directed** edge (u, v), vertex u comes before vertex v in the ordering. This ordering is known as a topological order.  
 The algorithm operates by repeatedly selecting nodes with no **incoming edges**, removing them from the graph, and adding them to the topological order. It continues this process until all nodes have been included in the order. Topological sorting is widely used in various applications, including task scheduling, dependency resolution, and optimizing build systems.
 
+### 5. Kadane's algorithm (maximum subarray sum)  
+Kadane's algorithm is a popular algorithm used to find the maximum subarray sum within a given array of integers.The algorithm operates in a simple and elegant way, maintaining two variables as it traverses the array:  
+Current Sum (currentSum): This variable keeps track of the maximum sum subarray ending at the current position.  
+Maximum Sum (maxSum): This variable keeps track of the maximum sum subarray found so far as the algorithm progresses.  
+The maxSum variable is updated whenever currentSum exceeds its current value. By the end of the iteration, maxSum will contain the maximum sum subarray.
+
 ## Data Structures in this Repository
 Check in ./DataStructures and Algorithms/DS's
 ### 1. Singly Linked List
