@@ -40,6 +40,12 @@ button{
     margin: auto 8px;
     font-size: larger;
 }
+.options:hover{
+    cursor: pointer;
+}
+.selected{
+    color: black;
+}
 .main-div{
     display: flex;
     flex-direction: column;

@@ -3,21 +3,21 @@ const data = [
     id: 0,
     name: "Rajdip Kaur",
     profile: "QA Automation",
-    img: "../../Testimages/images (1).jpg",
+    img: "./img.jpg",
     description: "lorem epusum kuch toh"
   },
   {
     id: 1,
     name: "Tejveer Singh",
     profile: "Web Developer",
-    img: "../../Testimages/images (3).jpg",
+    img: "./img.jpg",
     description: "lorem epusum kuch toh tejveer k liye"
   },
   {
     id: 2,
     name: "Rajpreet Kaur",
     profile: "Manager/Analyst",
-    img: "../../Testimages/images (2).jpg",
+    img: "./img.jpg",
     description: "lorem epusum kuch toh for Rajpreet"
   }
 ]
