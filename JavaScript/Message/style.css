@@ -1,0 +1,59 @@
+body{
+    background: linear-gradient(#b8d8fc, white) ;
+}
+button{
+    width: fit-content;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: whitesmoke;
+}
+button:hover{
+    background: rgba(0, 0, 0, 0.4);
+}
+.container{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    text-align: center;
+    color: rgb(24, 113, 230);
+}
+.message{
+    border: 1px solid gray;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding: 0 20px;
+    box-shadow: 0ox 2px 4px 0px black;
+}
+.message input{
+    width: 90%;
+    padding: 8px 0;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    border-top-left-radius:  0;
+    border-bottom-left-radius: 0;
+}
+.hr{
+    border-bottom: 6px solid rgb(10, 52, 80);
+}
+.icon{
+    border-radius: 5px 0 0 5px;
+}
+.output{
+    text-align: center;
+    text-transform: uppercase;
+}
+@media (max-width: 480px) {
+    .message input{
+        width: 80%;
+    }
+}
