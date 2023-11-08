@@ -1,6 +1,6 @@
 const calTime = () => {
     let date = new Date()
-    let dayNum = date.getDate()
+    let dayNum = date.getDay()
     let hr = date.getHours()
     let min = date.getMinutes()
     let sec = date.getSeconds()

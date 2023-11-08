@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" >
+    <title>Weathr App</title>
+</head>
+<body>
+    <div class="card">
+        <div class="searchbar">
+            <input id="input" type="text" placeholder="Enter city Name" />
+            <button id="button"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i></button>
+        </div>
+        <div class="error">No such city exists!</div>
+        <div class="weather-container">
+            <div class="weather">
+                <img src="images/clouds.png" alt="Current Weather" class="weatherImg">
+                <h1 class="temp">--</h1>
+                <h5 class="condition">--</h5>
+                <h2 class="city">Denver</h2>
+            </div>
+            <div class="footer-container">
+                <div class="footer">
+                    <img src="images/humidity.png" alt="Humidity" class="footerImg">
+                    <div class="f-textc">
+                        <div class="humidity">--%</div>
+                        <div>Humidity</div>
+                    </div>
+                </div>
+                <div class="footer right">
+                    <img src="images/wind.png" alt="Wind" class="footerImg">
+                    <div class="f-textc">
+                        <div class="wind">--km/hr</div>
+                        <div>Wind Speed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
