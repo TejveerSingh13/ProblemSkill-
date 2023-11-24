@@ -40,3 +40,32 @@ function curryAdd(x) {
 }
 ```
 In this example, curryAdd is a curried version of the add function. When you invoke curryAdd(2), it returns a function that takes one argument (y), and when you invoke curryAdd(2)(3), it returns a function that takes the final argument (z). The sequence of function calls allows you to partially apply arguments and create more specialized functions.  
+
+## 3. Throttle
+### Concept
+Throttling is a programming concept used to control the rate at which a function is executed. It ensures that the function is not called more often than a specified time interval, also known as the throttle interval. Throttling is commonly used in scenarios where continuous or rapid execution of a function is not desirable, such as handling user input, resizing events, or scrolling events.  
+### Example
+```javascript
+function throttle(func, delay) {
+  let lastTime = 0;
+
+  return function (...args) {
+    const currentTime = new Date().getTime();
+
+    if (currentTime - lastTime >= delay) {
+      func.apply(this, args);
+      lastTime = currentTime;
+    }
+  };
+}
+
+// Example usage:
+const throttledFunction = throttle(() => {
+  console.log('Function executed!');
+}, 1000); // Throttle interval set to 1000 milliseconds (1 second)
+
+// Execute the throttled function multiple times
+setInterval(() => {
+  throttledFunction();
+}, 200); // The function will be called at most once every 1000 milliseconds (1 second)
+```
