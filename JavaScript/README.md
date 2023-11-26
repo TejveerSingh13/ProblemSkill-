@@ -69,3 +69,10 @@ setInterval(() => {
   throttledFunction();
 }, 200); // The function will be called at most once every 1000 milliseconds (1 second)
 ```
+## 3.1 Enhance Throttleing
+### Concept
+Two flags are used **leading** and **trailing**
+1. leading = _True_ and trailing _True_ : Default behaviour as the above throttling
+2. leading = _False_ and trailing _False_ : Nothing will happen wont be able to run the throttle function
+3. leading = _True_ and trailing _False_ : The function executes immediately upon the first call, but subsequent calls within the delay are ignored. It doesn't keep track of the latest call; it only allows the first call to proceed immediately.  
+4. leading = _False_ and trailing _True_ : The first call is ignored (doesn't execute immediately) because leading is set to false. However, it schedules a trailing invocation after the specified delay. Subsequent calls during the waiting period update the arguments to be used for the trailing invocation. After the delay, the function executes with the arguments from the latest call within the delay.
