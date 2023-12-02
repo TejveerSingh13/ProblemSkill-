@@ -1,6 +1,8 @@
 # ProblemSkill-
 A repository for JS practice
 
+[a relative link](README.md)
+
 Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
 ## Important Algorithms learned from leetcode
 ### 1. Floyd's cycle-finding algorithm
