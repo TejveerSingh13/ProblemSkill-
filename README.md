@@ -1,7 +1,7 @@
 # ProblemSkill-
 A repository for JS practice
 
-[a relative link](README.md)
+[a relative link](JavaScript)
 
 Contains my solutions to some leetcode problems, vanilla JS, and DSA in JS
 ## Important Algorithms learned from leetcode
