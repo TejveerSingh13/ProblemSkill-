@@ -105,3 +105,5 @@ console.log(calculate(2)); // Output: (2 + 1)^2 + 3 = 12
 ### Difference from Abstraction and Inheritance:
 **Composition vs. Abstraction:** Composition is about combining simpler components to build more complex ones, while abstraction involves simplifying complex systems by hiding unnecessary details. Composition focuses on building, while abstraction focuses on simplifying.   
 **Composition vs. Inheritance:** Composition is an alternative to inheritance. With composition, you create relationships between objects by combining them, whereas inheritance involves creating relationships by creating hierarchies of classes. Composition is often considered more flexible and favors a "has-a" relationship over an "is-a" relationship.  
+
+#### ****IMPORTANT -> Check code immutable-helper for Array and Object manupulation!!!
