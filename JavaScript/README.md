@@ -107,3 +107,65 @@ console.log(calculate(2)); // Output: (2 + 1)^2 + 3 = 12
 **Composition vs. Inheritance:** Composition is an alternative to inheritance. With composition, you create relationships between objects by combining them, whereas inheritance involves creating relationships by creating hierarchies of classes. Composition is often considered more flexible and favors a "has-a" relationship over an "is-a" relationship.  
 
 #### ****IMPORTANT -> Check code immutable-helper for Array and Object manupulation!!!
+
+## 5. Context, `this` and Binding  
+The term "context" in JavaScript typically refers to the value of the this keyword within a particular execution scope. The value of this is dynamically determined based on how a function is invoked, and it can vary depending on the context in which the function is called.  
+### `this` in Different Contexts:
+* **Global Context:**  
+In the global scope or when a function is called without any specific context, this refers to the global object (window in browsers, global in Node.js).
+```javascript
+console.log(this); // Refers to the global object
+```
+* **Function Context:**  
+Inside a regular function, `this` is determined by how the function is called. It can be influenced by methods like `call()`, `apply()`, or `bind()`.
+```javascript
+function myFunction() {
+  console.log(this);
+}
+myFunction(); // Refers to the global object
+const obj = { method: myFunction };
+obj.method(); // Refers to the object (obj) calling the method
+```
+* **Object Method Context:**      
+When a function is a method of an object, `this` refers to the object itself.
+```javascript
+const obj = {
+  myMethod: function() {
+    console.log(this);
+  }
+};
+obj.myMethod(); // Refers to the object (obj) calling the method
+```
+* **Event Handler Context:**      
+In the context of event handlers, like those in the DOM, this typically refers to the DOM element that triggered the event.
+```html
+<button onclick="console.log(this);">Click me</button>
+```
+* **Arrow Function Context: <- Very IMPORTANT check [here](https://www.programiz.com/javascript/arrow-function) to learn more**     
+Unlike regular functions, arrow functions do not have their own `this` context. They inherit `this` from the enclosing lexical scope.
+```javascript
+const myArrowFunction = () => {
+  console.log(this);
+};
+myArrowFunction(); // Inherits from the surrounding lexical scope
+```
+### Explicit Binding Methods:      
+* **1. `call()` Method:** The call() method is used to invoke a function immediately with a specified this value and arguments provided individually.
+* **2. `apply()` Method:** The apply() method is similar to call(), but it takes arguments as an array.
+```javascript
+function greet() {
+  console.log(`Hello, ${this.name}`);
+}
+const person = { name: "John" };
+greet.call(person); // Outputs: Hello, John
+greet.apply(person, ["Hello"]); // Outputs: Hello, John
+```
+* **3. `bind()` Method:** The bind() method returns a new function with a bound this value, but unlike call() and apply(), it doesn't immediately invoke the function.
+```javascript
+function greet() {
+  console.log(`Hello, ${this.name}`);
+}
+const person = { name: "John" };
+const greetJohn = greet.bind(person);
+greetJohn(); // Outputs: Hello, John
+```
