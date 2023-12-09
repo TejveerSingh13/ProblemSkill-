@@ -77,7 +77,12 @@ Two flags are used **leading** and **trailing**
 3. leading = _True_ and trailing _False_ : The function executes immediately upon the first call, but subsequent calls within the delay are ignored. It doesn't keep track of the latest call; it only allows the first call to proceed immediately.  
 4. leading = _False_ and trailing _True_ : The first call is ignored (doesn't execute immediately) because leading is set to false. However, it schedules a trailing invocation after the specified delay. Subsequent calls during the waiting period update the arguments to be used for the trailing invocation. After the delay, the function executes with the arguments from the latest call within the delay.
 
-## 4. Composition and pipe()
+## 4. Throttle
+### Concept + difference from throttle    
+Debounce waits for the mentioned cooldown period to expire before executing the function. If the function is invoked before the cooldown period is over, the debounce function restarts the cooldown period in a simple debounce.   
+On the other hand, in the case of throttle, the throttle will delay the function execution until the wait period. It ignores all calls made to the function during the wait period instead of restarting the waiting period, as in the case of debounce.
+
+## 5. Composition and pipe()
 **Composition:**
 Composition is a fundamental concept in software design, where complex systems are built by combining smaller, more manageable parts. In JavaScript, composition often involves creating objects or functions by combining multiple smaller objects or functions.  
 For example, if you have two functions `f(x)` and `g(x)`, you can compose them to create a new function `h(x) = f(g(x))`.
@@ -108,7 +113,7 @@ console.log(calculate(2)); // Output: (2 + 1)^2 + 3 = 12
 
 #### ****IMPORTANT -> Check code immutable-helper for Array and Object manupulation!!!
 
-## 5. Context, `this` and Binding  
+## 6. Context, `this` and Binding  
 The term "context" in JavaScript typically refers to the value of the this keyword within a particular execution scope. The value of this is dynamically determined based on how a function is invoked, and it can vary depending on the context in which the function is called.  
 ### `this` in Different Contexts:
 * **Global Context:**  
