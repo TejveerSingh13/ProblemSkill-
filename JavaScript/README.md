@@ -174,3 +174,20 @@ const person = { name: "John" };
 const greetJohn = greet.bind(person);
 greetJohn(); // Outputs: Hello, John
 ```
+## 6. DOM tree structures and Key words
+The Document Object Model (DOM) represents the structure of an HTML or XML document as a tree-like structure. The DOM tree consists of nodes, and each node represents an element, attribute, or piece of text in the document. The structure can be summarized as follows:   
+
+**1. Document Node (root node):** Represents the entire document.   
+**2. Element Nodes:** Represent HTML or XML elements.   
+**3. Attribute Nodes:** Represent attributes of elements.   
+**4. Text Nodes:** Contain the text content of elements.   
+
+To access children nodes in the DOM tree, you can use various properties and methods provided by the DOM API. Some commonly used ones include:   
+
+**1. parentNode:** Gets the parent node of a specified node.   
+**2. childNodes:** Gets a NodeList of child nodes for a specified node.   
+**3. firstChild:** Gets the first child node of a specified node.   
+**4. lastChild:** Gets the last child node of a specified node.   
+**5. nextSibling:** Gets the node immediately following a specified node.   
+**6. previousSibling:** Gets the node immediately preceding a specified node.   
+**7. children:** Gets a live HTMLCollection of child elements for a specified node.   
