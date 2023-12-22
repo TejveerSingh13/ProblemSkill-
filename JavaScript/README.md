@@ -174,7 +174,7 @@ const person = { name: "John" };
 const greetJohn = greet.bind(person);
 greetJohn(); // Outputs: Hello, John
 ```
-## 6. DOM tree structures and Key words
+## 7. DOM tree structures and Key words
 The Document Object Model (DOM) represents the structure of an HTML or XML document as a tree-like structure. The DOM tree consists of nodes, and each node represents an element, attribute, or piece of text in the document. The structure can be summarized as follows:   
 
 **1. Document Node (root node):** Represents the entire document.   
@@ -191,3 +191,30 @@ To access children nodes in the DOM tree, you can use various properties and met
 **5. nextSibling:** Gets the node immediately following a specified node.   
 **6. previousSibling:** Gets the node immediately preceding a specified node.   
 **7. children:** Gets a live HTMLCollection of child elements for a specified node.   
+
+## 8. Advanced Concepts in JavaScript Object Manipulation   
+
+When working with objects in JavaScript, understanding certain advanced concepts is crucial for effective and sophisticated manipulation of object properties. These concepts include handling enumerable and non-enumerable properties, using symbols as property keys, and leveraging methods like Object.defineProperties and Object.getOwnPropertyDescriptors. Here's a summary of these key concepts:   
+
+**1. Enumerable vs. Non-Enumerable Properties**   
+* **Enumerable Properties:** These properties show up in for...in loops and are returned by methods like Object.keys(). They are the "visible" properties of an object.
+* **Non-Enumerable Properties:** These do not appear in for...in loops and are not returned by Object.keys(). They are often used to add properties to an object that should not be iterated over in loops.
+  
+**2. Symbols as Property Keys**
+* **Symbol:** A unique and immutable data type introduced in ES6, used as a way to create unique keys for object properties, thus avoiding property name collisions.
+* **Hidden Nature:** Properties keyed by symbols are not enumerated in standard loops (like for...in) and are not returned by methods like Object.keys(). This makes them suitable for "hidden" or "private" properties.
+* **Copying Symbols:** When copying properties from one object to another, it's important to consider symbol-keyed properties explicitly, as they are not handled by some standard object-copying methods.
+
+**3. Object.defineProperties and Object.getOwnPropertyDescriptors**
+* **Object.defineProperties:** This method is used to define new or modify existing properties directly on an object, providing control over property descriptors.
+  **Usage:** Allows the definition of multiple properties at once, specifying their descriptors, like value, writability, enumerability, configurability, and getter/setter functions.
+* **Object.getOwnPropertyDescriptors:** Introduced in ES2017, this method returns all own property descriptors of a given object.
+  **Usage:** Useful for getting a complete descriptor map, including accessors and flags, for all properties of an object (both enumerable and non-enumerable).
+
+**4. Copying Properties with Object.assign vs. completeAssign**
+* **Object.assign:** A method used to copy all enumerable own properties from one or more source objects to a target object.
+  **Limitation:** It does not copy non-enumerable properties and does not preserve the original property descriptors (like getters and setters).    
+* **completeAssign Function:** A custom function that goes beyond Object.assign by:
+  **Copying All Properties:** Including both enumerable and non-enumerable properties.
+  **Preserving Descriptors:** Using Object.getOwnPropertyDescriptors to maintain property characteristics like getters/setters and configurability.
+  **Handling Symbol Properties:** Explicitly copying properties keyed by symbols.
