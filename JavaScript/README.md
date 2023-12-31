@@ -218,3 +218,24 @@ When working with objects in JavaScript, understanding certain advanced concepts
   **Copying All Properties:** Including both enumerable and non-enumerable properties.
   **Preserving Descriptors:** Using Object.getOwnPropertyDescriptors to maintain property characteristics like getters/setters and configurability.
   **Handling Symbol Properties:** Explicitly copying properties keyed by symbols.
+
+## 9. Asynchronous JS   
+
+Async JavaScript -> initially handeled by `callbacks` -> then due to callback hell `Promises` were introduced but they still used callback -> so `async/await` was introduced.  
+### Callbacks-
+* A **callback** is just a plain old JavaScript function that can be called in response to an event.
+* Callbacks are defined independently of the operations that call them. They are passed into some function as an argument, stored until needed, and then called when a relevant event occurs.
+* Callbacks are generally called with information on whether an operation succeeded or failed, and must be able to handle both scenarios.
+* Callbacks can be called multiple times by the functions that receive them.
+
+### Promise 
+* **Promises** are objects that represent the outcome of an event that may not yet have occured. They store information about whether the event has occured yet, and if so, what it’s outcome was.
+* Promises are created and then returned by the function that initiated the asynchronous operation. When a relevant event occurs, the operation will store its result on the promise, which in turn can notify any success or failure handlers.
+* Promises don’t handle anything by default, but success and failure handlers are attached later.
+* Promises can only represent one event - they are either successful once, or failed once.
+
+### Difference between Promise and Callback
+* Callbacks are functions, promises are objects
+* Callbacks are passed as arguments, promises are returned
+* Callbacks handle success and failure, promises don’t handle anything
+* Callbacks can represent multiple events, promises represent at most one
