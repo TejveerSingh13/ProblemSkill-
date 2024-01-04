@@ -239,3 +239,54 @@ Async JavaScript -> initially handeled by `callbacks` -> then due to callback he
 * Callbacks are passed as arguments, promises are returned
 * Callbacks handle success and failure, promises don’t handle anything
 * Callbacks can represent multiple events, promises represent at most one
+
+## 10. JS Generator Functions (Basics)   
+### Overview
+Generator functions are a unique feature in JavaScript, introduced in ES6, that allow functions to pause their execution and subsequently resume from the same point. Generators are particularly useful for managing asynchronous operations in a synchronous-like manner, iterating over data streams, and implementing custom iterators and complex control flows.   
+
+### Syntax and Characteristics
+* Declared with `function*` syntax.
+* Can pause and resume their execution using the `yield` keyword.
+* Return a Generator object when invoked.
+
+### Generator Object
+* Created when a generator function is called.
+* Adheres to both the iterable and iterator protocols, making it usable in a `for...of` loop and with the spread operator.
+* Provides `next()`, `return()`, and `throw()` methods to control execution.
+
+### `yield` Keyword
+* Pauses the generator function and returns the yielded value to the caller.
+* Can be used to receive input when the generator resumes.
+* Execution resumes from the last yield point when next() is called.
+
+### `next()` Method
+* Resumes the generator function from where it was last paused.
+* Returns an object with value (yielded value) and done (boolean indicating if the generator function has completed execution) properties.
+
+### `return()` Method
+* Terminates the generator function early.
+* Returns an object with value (provided value) and done set to true.
+
+### `throw()` Method
+* Throws an error from the current paused state of the generator function.
+* Can be caught inside the generator using try...catch.
+
+### Use Cases
+**Asynchronous Operations:** Handle async tasks in a synchronous-like fashion, making the code more readable and maintainable.   
+**Iterators and Iterables:** Create custom iterators that can produce a sequence of values on-demand.   
+**Control Flow:** Implement complex control flows, like coroutines and state machines.   
+
+### Example
+```javascript
+function* numberGenerator() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+
+const generator = numberGenerator(); // Creates a generator object
+
+console.log(generator.next()); // { value: 1, done: false }
+console.log(generator.next()); // { value: 2, done: false }
+console.log(generator.next()); // { value: 3, done: true }
+```
