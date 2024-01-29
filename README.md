@@ -2,6 +2,7 @@
 A repository for JS practice
 
 ### To check core JavaScript Concepts - > [Link](JavaScript)
+### To check TypeScript Concepts - > [Link](TypeScript)
 ### This README contains some important problem solving algorithms and DSA in JS
 
 ## Important Algorithms learned from leetcode
