@@ -22,9 +22,11 @@ We can add the type like above to callback functions too.
 ```typescript
 // Example of type Alisases
 type User = {
+  readonly _id: string //readonly is a keyword
   name: string,
   email: string,
   isActive: boolean
+  creditCard?: number //optional argument
 }
 function createUser(user : User) : User {
   return {name: 'tej', email: 'tej@tej.com', isActive: true}
@@ -37,3 +39,19 @@ createUser({name: 'tej, email: '', isActive: false})
 * Improved maintainability
 * Error prevention:
 Type aliases can help you to prevent errors by making it clear what types of data are expected.
+
+### Combining types
+```typescript
+type cardNumber = {
+  cardNumber:string
+}
+type cardDate = {
+  cardDate:string
+}
+type cardDetails = cardNumber & cardDate & {
+  cvv: number
+}
+```
+
+for arrays syntax is -> `const arr: string/number[] = []` || `Array<number/string> = []`
+for 2-D array -> `const 2dArr: number[][] = []`
