@@ -93,5 +93,50 @@ To restrict user choice. Similar to Strict Assignemtn?
   }
   let hcSeat = SeatChoice.AISLE
 ```
+## Interface
+Interface is different from type.
 
+```typescript
+interface User {
+  email: string,
+  userId: number,
+  googleId?: string, // optional
+  readonly dbId: number, // read Only cant update value once set
+  //startTrial: () => string, // startTrial is a function that returns a string **OR**
+  startTrial(): string,
+  getCoupon(couponname: string, value: number): number
+}
+// it is said that ~" An interface can be open again" OR "reopening of an interface"
+// which basically means that we can add properties in the furute to it! Eg,,,,
 
+interface User {
+  githubToken?: string
+}
+// this get added to existing properties.
+
+interface Admin extends User {
+  role: "admin" | "ta" | "learner"
+}
+
+const tej : User = {
+    dbId: 22,
+    email: "tej@tej.com",
+    userId: 1385,
+    startTrial: () => { return "trail Started" },
+    getCoupon: (name: "Tej10", off: 10) => { return 10 },//over here the parameter we passed is name != couponname is okay since its just reference
+}
+```
+# Classes in Typescript
+```typescript
+  class User {
+    email:string
+    name: string // need to create reference outside the constructor
+    city: string = "" // since it is not initilized/used inconstructor therefore, need to initilize it here
+    constructor(email: string, name: string){
+      this.email = email; // the `this` is reference to the email and name outside the constructor.
+      this.name = name;
+  }
+}
+const tej = new User("tej@tej.com, "Tej")// no need to provide property name i.e. email and name
+tej.city // way to access
+```
