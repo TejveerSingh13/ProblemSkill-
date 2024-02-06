@@ -290,3 +290,10 @@ console.log(generator.next()); // { value: 1, done: false }
 console.log(generator.next()); // { value: 2, done: false }
 console.log(generator.next()); // { value: 3, done: true }
 ```
+
+## 11. Observable, Observer, Subscriber IMPORTANT!! 
+### Observable:
+**Observable** is like a wrapper around a stream of data most of the time async but it can be a sync data too.    
+**Observer** is an object which runs a specific code once the Observable gets a new value. The observer usually has 3 methods in it. next(), error() and complete(). But it can also be just a method/fucntion that needs to be run once new value comes in.    
+**Subscriber** is someone that connects the observer to the Observable. **Check the code 57.Observable.js in ./snippet ->** the subscriber also make sure the observer has the 3 methods Since the Observable only knows that the observer has next(), error() and complete() these 3 methods.   
+**Check all Observable related snippets from 70-74**
