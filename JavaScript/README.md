@@ -290,3 +290,55 @@ console.log(generator.next()); // { value: 1, done: false }
 console.log(generator.next()); // { value: 2, done: false }
 console.log(generator.next()); // { value: 3, done: true }
 ```
+
+## 11. Observable, Observer, Subscriber IMPORTANT!! 
+### Observable:
+**Observable** is like a wrapper around a stream of data most of the time async but it can be a sync data too.    
+**Observer** is an object which runs a specific code once the Observable gets a new value. The observer usually has 3 methods in it. next(), error() and complete(). But it can also be just a method/fucntion that needs to be run once new value comes in.    
+**Subscriber** is someone that connects the observer to the Observable. **Check the code 57.Observable.js in ./snippet ->** the subscriber also make sure the observer has the 3 methods Since the Observable only knows that the observer has next(), error() and complete() these 3 methods.   
+**Check all Observable related snippets from 70-74**
+
+## 12. iterator and iterable IMPORTANT!! 
+In JavaScript, the concepts of iterators and iterables are related to how you can iterate over collections, such as arrays, objects, or custom data structures.    
+
+**Iterable:** An object is considered iterable if it has an associated iterator. In other words, an iterable is any object that can be looped over using the for...of loop, Array.from(), or the spread operator (...). Examples of built-in iterables include arrays, strings, maps, sets, and more.   
+ 
+**Iterator:** An iterator is an object that defines how to access the values or elements in an iterable, one at a time. It should have a next() method that returns an object with two properties: value (the current element) and done (a boolean indicating if there are more elements to iterate over). The iterator keeps track of the current position within the iterable.    
+
+```javascript
+// Array Example
+const iterableArray = [1, 2, 3];
+
+// Get an iterator from the iterable
+const iterator = iterableArray[Symbol.iterator]();
+
+// Use the iterator to access elements
+console.log(iterator.next()); // { value: 1, done: false }
+console.log(iterator.next()); // { value: 2, done: false }
+console.log(iterator.next()); // { value: 3, done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
+```
+```javascript
+// Object Example
+const myIterable = {
+  data: [1, 2, 3, 4, 5],
+  [Symbol.iterator]() {
+    let index = 0;
+
+    return {
+      next: () => {
+        if (index < this.data.length) {
+          return { value: this.data[index++], done: false };
+        } else {
+          return { value: undefined, done: true };
+        }
+      },
+    };
+  },
+};
+
+// You can now use for...of to iterate over the object
+for (const item of myIterable) {
+  console.log(item);
+}
+```
