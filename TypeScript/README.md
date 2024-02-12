@@ -282,3 +282,44 @@ class Instagram extends TakePhoto {
     }
 }
 ```
+# Generics <x>
+What i understood is, it is use to generalise type. For eg suppose we hae a function in which the return type is same as the parameter type.   
+We can also pass our customize type in the generic but the syntax is a little different check documentations.   
+```typescript
+// this is how we usually thing we do but here we need to put condition to match the return type to the input parameter type
+// which may make the code long incase of multiple input type
+function identityOne(val: boolean | number): boolean | number {
+  return val;
+}
+// this is the eaasiest hack anyone would think of but this might mess up the implementation
+function identityTwo(val: any): any {
+  return val;
+}
+// This is the peoper way to use generic it makes sure the types are matched
+function identityThree<Type>(val: Type): Type {
+  return val;
+}
+// This is the short hand version of the above code
+function identityFour<T>(val: T): T {
+  return val;
+}
+// This is how you use this fucntion 
+let func = identityFour(3) //<- this will set the type of return as the type of input parameter type
+```
+## Generics with array and Arrow fucntions
+```typescript
+function getSearchProduct<T>(products: T[]): T {
+  // need to understand that the type is still T
+  // the line (products: T[]) or (products: Array<T>) says the input is an Array of type T
+  // now return type T means it should be one of the value from that array of type T
+  return products[3];
+}
+
+// Converting the above to arrow fucntion
+
+// the "," is for compiler to let it know its not jsx its a generic
+const getMoreSearchProducts = <T,>(products: T[]): T => {
+  return products[3];
+};
+```
+## Generic class <- look documentation
