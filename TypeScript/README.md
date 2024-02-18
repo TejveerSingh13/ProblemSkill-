@@ -1,6 +1,6 @@
 # Notes for TypeScript Concepts
 
-TypeScript is a superset of JavaScript. Its not like it adds more features to existing JS but it a development tool that helps you to write better code. Its all about **Type-Safety**. Only job of TypeScript -> Static Checking.   
+TypeScript is a superset of JavaScript. Its not like it adds more features to existing JS but it a development tool that helps you to write better code. Its all about **Type-Safety**. Only job of TypeScript -> Static Checking.  Used to write production level javascript code. 
 Types : number, string, boolean, null, undefined, **void**, objects, array, tuplees, any, **never**, unknown, etc. All lowercase.   
 Type Inference -> typescript is smart, if you assign a variable a value immediately Eg. `let id = 123`, we dont have to write it as `let id : number = 123`.   
 
@@ -316,10 +316,46 @@ function getSearchProduct<T>(products: T[]): T {
 }
 
 // Converting the above to arrow fucntion
-
 // the "," is for compiler to let it know its not jsx its a generic
 const getMoreSearchProducts = <T,>(products: T[]): T => {
   return products[3];
 };
 ```
-## Generic class <- look documentation
+# Norrowing
+Being extra cautious about multiple data type especially array and objects. -> check documentation
+`in` -> can use the "in" operator  for norrowing.
+```typescript
+// Simple example
+function detectTypes(val: number | string) {
+  if (typeof val == "string") return val.toLowerCase();
+  return val + 3;
+}
+function provideId(id: string | null) {
+  if (!id) {
+    console.log("Please provide ID");
+    return;
+  }
+  id.toLowerCase();
+}
+```
+```typescript
+// Kind of a wierd example according to documentation
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+
+// what this fucntion does it it checks weather the given parameter is a Fish or no
+// it will return true only if it is a fish and the return type `pet is Fish` further confirms it if it indeed a Fish
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+
+function getFood(pet: Fish | Bird) {
+  if (isFish(pet)) {
+    // over here if we didnt put the return type as `pet is Fish`
+    // typescript would still consider pet as FISH | BIRD
+    return "Fish Food";
+  } else return "Bird Food";
+}
+```
+## Discriminated Union, never type Exhaustivness checking <- see documentation
+Basically this is to handle a case where a new type is added as a parameter and which we havnt handled like how we have handled above. Thats where we use the never type.
